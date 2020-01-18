@@ -28,7 +28,6 @@ const Search = props => {
             console.error(e);
         });
     }, [searchVal]);
-    console.log(searchResults);
     return (
         <div className='Search'>
             <label htmlFor="search" className='Search__label'> Search for TV shows: </label>
