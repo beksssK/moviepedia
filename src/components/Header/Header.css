@@ -1,0 +1,15 @@
+.Header{
+    background: #db3c42;
+    padding: 10px 15px;
+}
+.Header__title{
+    margin: 0;
+}
+.Header__title a{
+    color: #fff;
+    padding: 8px 30px;
+    text-decoration: none;
+}
+.Header__title a:hover{
+    color: #dbbbbb;
+}
