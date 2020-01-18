@@ -1,0 +1,31 @@
+.Home{
+    margin: 10px auto;
+    max-width: 1000px;
+}
+.Home__title{
+    text-align: center;
+    color: #db0100;
+    text-transform: uppercase;
+}
+.Card {
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+    width: 250px;
+    border: 1px solid #db0100;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.Card:hover::before{
+    background: rgba(0, 0, 0, 0.3);
+}
+.Card::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.Card img{
+    width: 100%;
+}

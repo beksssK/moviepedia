@@ -14,6 +14,7 @@ const TvShow = props => {
     };
     useEffect(() => {
         getTVShow().catch(e => console.error(e));
+        // eslint-disable-next-line
     }, [props.match.params.id]);
     const stars = [];
     if(tvShow.name){
