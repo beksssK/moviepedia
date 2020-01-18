@@ -1,5 +1,4 @@
 .TVShow{
-    border: 1px solid;
     max-width: 1200px;
     margin: 10px auto;
     padding: 10px 15px;
@@ -11,5 +10,20 @@
     border-radius: 10px;
 }
 .Show__info{
+    padding: 0 30px;
+}
+.Show__item{
+    padding: 10px 5px;
+}
+
+.Show__item i{
+    color: #d6d617
+}
+.Show__mini-title{
+    font-weight: bold;
+}
+
+.Show__summary{
     padding-left: 30px;
+    width: 30%;
 }

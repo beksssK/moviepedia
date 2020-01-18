@@ -32,7 +32,7 @@
     font-size: 17px;
     color: #db7c80;
     z-index: 10;
-    font-family: "Font Awesome 5 Free";
+    font-family: "Font Awesome 5 Free", serif;
     font-weight: 900;
     position: absolute;
     top: 25%;
@@ -43,11 +43,12 @@
     left: 23%;
 }
 .Search__result_item{
+    background: #fff;
     border: 1px solid #db0100;
     border-radius: 5px;
     width: 350px;
     padding: 5px 15px;
-    margin: 3px 0;
+    margin: 2px 0;
     cursor: pointer;
 }
 .Search__result_item:hover{

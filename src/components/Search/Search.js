@@ -5,6 +5,7 @@ import {withRouter} from "react-router-dom";
 const Search = props => {
     const [searchVal, setSearchVal] = useState('');
     const [searchResults, setSearchResults] = useState([]);
+
     const getResults = async (name) => {
         try{
             let response = await axiosMovies.get('search/shows?q=' + name);
@@ -17,6 +18,11 @@ const Search = props => {
         setSearchVal('');
         props.history.push('/shows/' + showId);
     };
+    const clearResults = () => {
+        setTimeout(() => {
+            setSearchResults([]);
+        }, 200);
+    };
     useEffect(() => {
         getResults(searchVal).catch(e => {
             console.error(e);
@@ -24,9 +30,9 @@ const Search = props => {
     }, [searchVal]);
     return (
         <div className='Search'>
-            <label htmlFor="search" className='Search__label'>Search for TV shows: </label>
+            <label htmlFor="search" className='Search__label'> Search for TV shows: </label>
             <div className='Search__input'>
-                <input id='search' value={searchVal} onChange={(e) => setSearchVal(e.target.value)} type="text"/>
+                <input id='search' value={searchVal} onBlur={clearResults} onChange={(e) => setSearchVal(e.target.value)} type="text"/>
             </div>
             <div className='Search__result'>
                 {searchResults.map(movie => (
