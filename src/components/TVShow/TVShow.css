@@ -24,6 +24,9 @@
 }
 
 .Show__summary{
-    padding-left: 30px;
+    padding-left: 35px;
     width: 30%;
+}
+.Show__summary p{
+    line-height: 30px;
 }

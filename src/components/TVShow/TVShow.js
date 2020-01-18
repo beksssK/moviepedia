@@ -32,7 +32,7 @@ const TvShow = props => {
             {tvShow.name && (
                 <div className='Show-wrapper'>
                     <div className="Show__image-wrapper">
-                        <img src={tvShow.image.medium} alt=""/>
+                        {tvShow.image && <img src={tvShow.image.medium} alt=""/>}
                     </div>
                     <div className="Show__info">
                         <h2>{tvShow.name}</h2>
@@ -52,9 +52,15 @@ const TvShow = props => {
                             <span className='Show__mini-title'>Language: </span>
                             <span>{tvShow.language}</span>
                         </div>
+                        {tvShow.network ? (
+                            <div className='Show__item'>
+                                <span className='Show__mini-title'>Country: </span>
+                                <span>{tvShow.network.country.name}</span>
+                            </div>
+                        ) : null}
                         <div className='Show__item'>
-                            <span className='Show__mini-title'>Country: </span>
-                            <span>{tvShow.network.country.name}</span>
+                            <span className='Show__mini-title'>Status: </span>
+                            <span>{tvShow.status}</span>
                         </div>
                     </div>
                     <div className='Show__summary'>
