@@ -1,16 +1,21 @@
 import React, {useEffect, useState} from 'react';
 import './Search.css';
 import axiosMovies from "../../axios-movies";
-const Search = () => {
+import {withRouter} from "react-router-dom";
+const Search = props => {
     const [searchVal, setSearchVal] = useState('');
     const [searchResults, setSearchResults] = useState([]);
     const getResults = async (name) => {
         try{
-            let response = await axiosMovies.get('shows?q=' + name);
+            let response = await axiosMovies.get('search/shows?q=' + name);
             setSearchResults(response.data);
         } catch (e) {
             console.error('error happened while getting movie names', e);
         }
+    };
+    const showTVShow = showId => {
+        setSearchVal('');
+        props.history.push('/shows/' + showId);
     };
     useEffect(() => {
         getResults(searchVal).catch(e => {
@@ -25,7 +30,7 @@ const Search = () => {
             </div>
             <div className='Search__result'>
                 {searchResults.map(movie => (
-                    <div key={movie.show.id} className='Search__result_item'>
+                    <div key={movie.show.id} className='Search__result_item' onClick={() => showTVShow(movie.show.id)}>
                         {movie.show.name}
                     </div>
                 ))}
@@ -34,4 +39,4 @@ const Search = () => {
     );
 };
 
-export default Search;
+export default withRouter(Search);

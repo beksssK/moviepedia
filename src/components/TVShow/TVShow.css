@@ -1,0 +1,15 @@
+.TVShow{
+    border: 1px solid;
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 10px 15px;
+}
+.Show-wrapper{
+    display: flex;
+}
+.Show__image-wrapper img{
+    border-radius: 10px;
+}
+.Show__info{
+    padding-left: 30px;
+}

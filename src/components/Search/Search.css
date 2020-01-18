@@ -48,6 +48,7 @@
     width: 350px;
     padding: 5px 15px;
     margin: 3px 0;
+    cursor: pointer;
 }
 .Search__result_item:hover{
     background: #db0100;
