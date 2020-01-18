@@ -28,6 +28,7 @@ const Search = props => {
             console.error(e);
         });
     }, [searchVal]);
+    console.log(searchResults);
     return (
         <div className='Search'>
             <label htmlFor="search" className='Search__label'> Search for TV shows: </label>
@@ -37,7 +38,9 @@ const Search = props => {
             <div className='Search__result'>
                 {searchResults.map(movie => (
                     <div key={movie.show.id} className='Search__result_item' onClick={() => showTVShow(movie.show.id)}>
-                        {movie.show.name}
+                        {movie.show.image ? (<img height='50' width='auto'  src={movie.show.image.medium} alt=""/>) :
+                            <img height='50' width='auto' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFbz2hHONNEYQMdw5aF2DOh54V5UbQ09RsXwC6lirZPzQZk4NjwQ&s" alt=""/>}
+                        <span>{movie.show.name}</span>
                     </div>
                 ))}
             </div>

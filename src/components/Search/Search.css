@@ -41,16 +41,22 @@
 .Search__result{
     position: absolute;
     left: 23%;
+    z-index: 100;
 }
 .Search__result_item{
     background: #fff;
     border: 1px solid #db0100;
     border-radius: 5px;
     width: 350px;
-    padding: 5px 15px;
-    margin: 2px 0;
+    margin: 3px 0;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
+.Search__result_item img{
+    margin-right: 10px;
+}
+
 .Search__result_item:hover{
     background: #db0100;
     color: #fff;
