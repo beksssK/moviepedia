@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 const Header = () => {
     return (
         <header className='Header'>
-            <h1 className='Header__title'><NavLink to='/' exact>Moviepedia</NavLink></h1>
+            <h1 className='Header__title'><NavLink to='/' exact>Showpedia</NavLink></h1>
         </header>
     );
 };
