@@ -15,9 +15,6 @@ const TvShow = props => {
     useEffect(() => {
         getTVShow().catch(e => console.error(e));
     }, [props.match.params.id]);
-    if(tvShow.name){
-        console.log('kk', tvShow)
-    }
     const stars = [];
     if(tvShow.name){
         for(let i = 0; i < Math.round(tvShow.rating.average); i++){

@@ -5,7 +5,9 @@
 }
 .Show-wrapper{
     display: flex;
+    justify-content: center;
 }
+
 .Show__image-wrapper img{
     border-radius: 10px;
 }
@@ -26,6 +28,7 @@
 .Show__summary{
     padding-left: 35px;
     width: 30%;
+    align-self: center;
 }
 .Show__summary p{
     line-height: 30px;
